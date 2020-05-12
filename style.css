@@ -141,7 +141,7 @@ main #image{
 
 
 /* media queries */
-@media screen and(max-width: 768px){
+@media screen and (max-width: 768px){
 
     
     #content .content_inner{
@@ -153,7 +153,7 @@ main #image{
 
 
 
-@media screen and(max-width: 430px){
+@media screen and (max-width: 430px){
     
     main{
         height: auto;
@@ -212,7 +212,7 @@ main #image{
 }
 
 
-@media screen and(max-width: 340px){
+@media screen and (max-width: 340px){
 
     .content_inner #logo{
         padding: 1rem 2rem;
