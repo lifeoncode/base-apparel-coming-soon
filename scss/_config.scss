@@ -1,0 +1,44 @@
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$neutral: hsl(0, 6%, 24%);
+$primary-a: hsl(0, 36%, 70%);
+$primary-b: hsl(0, 93%, 68%);
+$primary-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+img {
+  width: 100%;
+  display: block;
+}
+
+@mixin flexDisplay($dir, $align, $justify) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin gridDisplay($col, $gap) {
+  display: grid;
+  grid-template-columns: $col;
+  gap: $gap;
+}
+
+@mixin transitionFast {
+  transition: all 0.3s ease;
+}
+
+@mixin transitionMedium {
+  transition: all 0.6s ease;
+}
+
+@mixin transitionSlow {
+  transition: all 1s ease;
+}

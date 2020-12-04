@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 32px;
+  background-color: #f96262;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1.5fr;
+      grid-template-columns: 2fr 1.5fr;
+  gap: 100px;
+  background: url(../images/bg-pattern-desktop.svg) no-repeat 0 0/cover;
+}
+
+.container header {
+  display: none;
+}
+
+.container .content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0 100px;
+}
+
+.container .content img.logo {
+  width: 50%;
+}
+
+.container .content h1 {
+  font-size: 55px;
+  margin: 150px 0 32px 0;
+}
+
+.container .content h1 span {
+  font-weight: 600;
+  color: #f96262;
+}
+
+.container .content p {
+  line-height: 1.4;
+  font-size: 16px;
+  color: #f96262;
+  margin-bottom: 32px;
+}
+
+.container .content form {
+  border: 2px solid #f96262;
+  border-radius: 32px;
+  position: relative;
+  padding: 10px;
+}
+
+.container .content form img.error {
+  position: absolute;
+  top: 16px;
+  right: 150px;
+  width: 5%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .content form img.error.show {
+  opacity: 1;
+}
+
+.container .content form button:focus,
+.container .content form input:focus {
+  outline: none;
+}
+
+.container .content form input {
+  padding: 10px 32px;
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f96262;
+  width: 80%;
+  background: transparent;
+}
+
+.container .content form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  border: 0;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container .content form button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .content form button img {
+  width: 20%;
+}
+
+.container .image_mobile {
+  display: none;
+}
+
+.container .image {
+  background: url(../images/hero-desktop.jpg) no-repeat 0 0/cover;
+}
+
+@media screen and (max-width: 965px) {
+  .container {
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1.5fr;
+        grid-template-columns: 2fr 1.5fr;
+    gap: 100px;
+  }
+  .container .content {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .container {
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1.5fr;
+        grid-template-columns: 2fr 1.5fr;
+    gap: 0;
+  }
+  .container .content {
+    padding: 0 64px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .container {
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    gap: 0;
+  }
+  .container header {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: #fff;
+  }
+  .container header img {
+    width: 50%;
+  }
+  .container .content {
+    padding: 0 64px;
+    padding: 0 32px 32px 32px;
+  }
+  .container .content img.logo {
+    display: none;
+  }
+  .container .content h1 {
+    font-size: 32px;
+    margin: 32px 0;
+  }
+  .container .content p {
+    font-size: 14px;
+  }
+  .container .content form input {
+    padding: 10px;
+  }
+  .container .content form img.error {
+    top: 20px;
+    right: 80px;
+  }
+  .container .image {
+    display: none;
+  }
+  .container .image_mobile {
+    display: block;
+    padding-top: 64px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
